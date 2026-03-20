@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Онлайн Школа</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .auth-card {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            width: 340px;
+            text-align: center;
+            border-top: 4px solid #4CAF50; /* Тот же зеленый, что на входе */
+        }
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background: #333;
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+        }
+        input:focus {
+            border-color: #4CAF50;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .links {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #888;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card">
+        <h2>Регистрация</h2>
+        <p style="font-size: 0.8em; color: #aaa; margin-bottom: 15px;">Создайте аккаунт для доступа к курсам</p>
+
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Электронная почта" required>
+            <input type="password" name="password" placeholder="Придумайте пароль" required>
+            <input type="hidden" name="role" value="student">
+
+            <button type="submit">Создать аккаунт</button>
+        </form>
+        <div class="links">
+            <p>Уже есть аккаунт? <a href="/auth">Войти</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
