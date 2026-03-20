@@ -1,8 +1,81 @@
 <!DOCTYPE html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Онлайн Школа</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Используем min-height на случай длинного текста */
+            margin: 0;
+            padding: 20px;
+        }
+        .about-card {
+            background-color: #2d2d2d;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            /* Увеличили блок */
+            width: 100%;
+            max-width: 800px;
+            /* Выравнивание текста по левому краю */
+            text-align: left;
+            border-left: 6px solid #4CAF50; /* Перенес акцент на левый край */
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+        .content {
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            /* Здесь будет твой текст */
+        }
+        .btn-container {
+            display: flex;
+            justify-content: flex-end; /* Кнопку прижмем к правому краю для баланса */
+        }
+        .btn-start {
+            padding: 15px 40px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .btn-start:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
+
+    <div class="about-card">
+        <h1>О нашей школе</h1>
+
+        <div class="content">
+            Здесь ты можешь написать всё, что посчитаешь нужным.
+            Блок теперь широкий, так что текст будет читаться легко.
+            Можно добавить списки, описание учителей или миссию проекта.
+            <br><br>
+            Просто замени этот текст в HTML-файле на свой собственный!
+            </div>
+
+        <div class="btn-container">
+            <a href="/auth" class="btn-start">Перейти к обучению →</a>
+        </div>
+    </div>
 
 </body>
 </html>
